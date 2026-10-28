@@ -2,19 +2,27 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Trang Web Đầu Tiên</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            background-color: #f0f2f5;
-        }
-        h1 { color: #007bff; }
-    </style>
+    <title>Trang web kết nối Supabase</title>
+    <!-- Thư viện Supabase JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-    <h1>Chào mừng bạn đến với trang web của tôi!</h1>
-    <p>Tôi đang tự tay tạo ra trang web này.</p>
+    <h1>Chào mừng đến với website của tôi!</h1>
+    <p id="status">Đang kết nối cơ sở dữ liệu...</p>
+
+    <script>
+        // 1. Dán Project URL của bạn vào đây (giữ nguyên dấu nháy đơn '')
+        const supabaseUrl = 'https://shpgeimrysxupveqibyh.supabase.co/rest/v1/';
+        
+        // 2. Dán anon key của bạn vào đây (giữ nguyên dấu nháy đơn '')
+        const supabaseKey = 'sb_publishable_MUSk9i-KqoD2axABqY3DrA_pBYgkmd_';
+
+        // Khởi tạo kết nối
+        const _supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+        // Kiểm tra kết nối thử xem có chạy không
+        console.log("Đã kết nối Supabase thành công!", _supabase);
+        document.getElementById("status").innerText = "Đã kết nối cơ sở dữ liệu thành công!";
+    </script>
 </body>
 </html>
