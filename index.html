@@ -96,7 +96,7 @@
 <body>
 
 <div class="container">
-    <h2>🚀 Trang Web Đầu Tiên x Supabase</h2>
+    <h2>🚀 WEDSITE NHẬP DỮ LIỆU LƯU TRÊN CƠ SỞ DỮ LIỆU</h2>
     
     <div id="status" class="status-box">Đang kết nối đến Supabase...</div>
 
@@ -105,9 +105,9 @@
         <label for="dataInput">Nhập nội dung cần lưu trữ:</label>
         <input type="text" id="dataInput" placeholder="Nhập ghi chú hoặc thông tin bất kỳ...">
     </div>
-    <button onclick="addData()">Gửi dữ liệu lên Supabase</button>
+    <button onclick="addData()">GỬI DỮ LIỆU LÊN MÁY CHỦ NGUYỄN HỮU PHƯỚC</button>
 
-    <h3>Danh sách dữ liệu từ Database:</h3>
+    <h3>DANH SÁCH DỮ LIỆU ĐANG CÓ TRÊN MÁY CHỦ NGUYỄN HỮU PHƯỚC:</h3>
     <ul id="dataList">
         <li>Chưa có dữ liệu nào...</li>
     </ul>
@@ -127,11 +127,11 @@
     // Tự động chạy khi mở web
     window.onload = function() {
         if (supabaseUrl !== 'https://shpgeimrysxupveqibyh.supabase.co' && supabaseKey !== 'sb_publishable_MUSk9i-KqoD2axABqY3DrA_pBYgkmd_') {
-            statusEl.innerText = "✅ Kết nối Supabase thành công!";
+            statusEl.innerText = "✅ Kết nối máy chủ thành công!";
             statusEl.className = "status-box status-success";
             loadData(); // Tải danh sách dữ liệu từ database
         } else {
-            statusEl.innerText = "⚠️ Hãy thay URL và Anon Key trong code!";
+            statusEl.innerText = "DỰ ÁN BY NGUYỄN HỮU PHƯỚC DEMO";
         }
     };
 
@@ -142,7 +142,7 @@
 
         if (error) {
             console.log("Chưa tạo bảng 'notes' hoặc lỗi:", error.message);
-            dataListEl.innerHTML = `<li>Lưu ý: Hãy tạo bảng 'notes' trên Supabase để hiển thị dữ liệu!</li>`;
+            dataListEl.innerHTML = `<li>Lưu ý: Hãy tạo bảng 'notes' trên máy chủ để hiển thị dữ liệu!</li>`;
             return;
         }
 
